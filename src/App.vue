@@ -1,0 +1,71 @@
+<template>
+  <div id="app">
+    <TheHeader/>
+    <router-view/>
+    <TheFooter />
+  </div>
+</template>
+<script>
+import TheFooter from "./components/TheFooter.vue";
+import TheHeader from "./components/TheHeader.vue";
+export default {
+  components : {
+    TheHeader,
+    TheFooter
+  }
+}
+</script>
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+  body, 
+  ul, 
+  li, 
+  h1, 
+  h2, 
+  p {
+    padding: 0px;
+    margin: 0px;
+  }
+  ul {
+    list-style: none;
+  }
+  body {
+    font-family: VisbyRoundCF, sans-serif;
+    color: #345;
+    background: url('./assets/pattern.svg') repeat top;
+  }
+
+  a {
+    color: #345;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .btn {
+    display: block;
+    padding: 10px 30px;
+    background: #f6006f;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(30, 60, 90, 0.2);
+    transition: all 0.3s;
+    border: none;
+    font-family: VisbyRoundCF, sans-serif;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background: #ff4b9c;
+    transform: scale(1.1);
+  }
+</style>
